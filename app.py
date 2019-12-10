@@ -12,7 +12,7 @@ build_db("complete_works")
 def show_table():
     complete_works = Play.query.all()
     play_schema = PlaySchema(many=True)
-    return render_template("index.html", complete_works=play_schema.dump(complete_works))
+    return "please search for a word"
 
 
 @app.route("/search_for_<word>/", methods=['GET'])
