@@ -34,9 +34,7 @@ def build_db(filename):
     db.create_all()
     complete_works = read_csv(f"{filename}")
     for play in complete_works:
-        index += 1
         the_play = Play(
-            play_num = index,
             play_id=play[0],
             title=play[1],
             text=play[2],
@@ -48,7 +46,6 @@ def build_db(filename):
 
 def main():
     """Main function"""
-    index = 0
     build_db("complete_works")
 
 if __name__ == '__main__':
