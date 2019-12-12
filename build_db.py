@@ -39,8 +39,8 @@ def build_db(filename):
             text=play[2],
         )
         db.session.add(the_play)
-#    db.session.commit()
-    db.create_all()
+    db.session.commit()
+
 
 
 def main():
