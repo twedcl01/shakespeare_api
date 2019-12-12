@@ -8,7 +8,7 @@ from models import Play
 
 csv.field_size_limit(sys.maxsize)
 
-index = 0
+
 
 def read_csv(filename):
     """File format: ID Name Age Species Location"""
@@ -48,6 +48,7 @@ def build_db(filename):
 
 def main():
     """Main function"""
+    index = 0
     build_db("complete_works")
 
 if __name__ == '__main__':
