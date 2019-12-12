@@ -34,6 +34,7 @@ def build_db(filename):
     db.create_all()
     complete_works = read_csv(f"{filename}")
     for play in complete_works:
+        index += 1
         the_play = Play(
             play_num = index,
             play_id=play[0],
