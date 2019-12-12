@@ -29,7 +29,7 @@ def build_db(filename):
     """
     if os.path.exists(f"{filename}.db"):
         os.remove(f"{filename}.db")
-    
+
     db.create_all()
     complete_works = read_csv(f"{filename}")
     for play in complete_works:
@@ -40,7 +40,7 @@ def build_db(filename):
         )
         db.session.add(the_play)
     db.session.commit()
-
+    db.create_all()
 
 
 def main():
