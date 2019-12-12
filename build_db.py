@@ -8,6 +8,7 @@ from models import Play
 
 csv.field_size_limit(sys.maxsize)
 
+index = 0
 
 def read_csv(filename):
     """File format: ID Name Age Species Location"""
@@ -34,6 +35,7 @@ def build_db(filename):
     complete_works = read_csv(f"{filename}")
     for play in complete_works:
         the_play = Play(
+            play_num = index,
             play_id=play[0],
             title=play[1],
             text=play[2],
